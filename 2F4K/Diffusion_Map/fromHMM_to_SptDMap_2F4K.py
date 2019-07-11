@@ -147,7 +147,7 @@ for tmp in hidden_transstates:
 #--------------------------------------------------------------------
 # Difuusion map calculation
 what_state='s'
-state_idx = 0
+state_idx = 0 # here, the first metastable state is considered
 
 print('Focusing on state number ' + str(state_idx))
 sys.stdout.flush()
@@ -359,10 +359,10 @@ eigenvectors = []
 
 if what_state == 's':
         print('Focusing on core states = ' + str(state_idx) + '...')
-        filename ='2F4K_' + str(hidden_states) + 'stateHMM_Sptdmap_state' + str(state_idx) + '_eps' + '.npz'
+        filename ='2F4K_' + str(hidden_states) + 'stateHMM_Sptdmap_state' + str(state_idx) + '.npz'
 else:
         print('Focusing on transitions state between state ' + str(state_idx) + '...')
-        filename = '2F4K_' + str(hidden_states) + 'stateHMM_Sptdmap_trans' + str(state_idx) + '_eps' + '.npz'
+        filename = '2F4K_' + str(hidden_states) + 'stateHMM_Sptdmap_trans' + str(state_idx) + '.npz'
 
 print('File where space time diffusoon map results are going to be stored in = ' + str(filename))
 sys.stdout.flush()
